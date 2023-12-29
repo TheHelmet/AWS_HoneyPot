@@ -1,25 +1,25 @@
 variable "admin_ip" {
-  default     = ["127.0.0.1/32"]
+  default     = ["127.0.0.1/32", "159.196.130.62/32"]
   description = "admin IP addresses in CIDR format"
 }
 
 variable "ec2_vpc_id" {
   description = "ID of AWS VPC"
-  default     = "vpc-XXX"
+  default     = "vpc-0fed1133240a2f381"
 }
 
 variable "ec2_subnet_id" {
   description = "ID of AWS VPC subnet"
-  default     = "subnet-YYY"
+  default     = "subnet-subnet-06055133c7be88151"
 }
 
 variable "ec2_region" {
   description = "AWS region to launch servers"
-  default     = "eu-west-1"
+  default     = "ap-southeast-2"
 }
 
 variable "ec2_ssh_key_name" {
-  default = "default"
+  default = "helmet-keypair"
 }
 
 # https://aws.amazon.com/ec2/instance-types/
