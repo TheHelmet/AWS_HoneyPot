@@ -62,7 +62,7 @@ variable "timezone" {
 }
 
 variable "linux_password" {
-  #default = "LiNuXuSeRPaSs#"
+  default = "LiNuXuSeRPaSs#"
   description = "Set a password for the default user"
 
   validation {
@@ -83,7 +83,7 @@ variable "web_user" {
 }
 
 variable "web_password" {
-  #default = "w3b$ecret"
+  default = "w3b$ecret"
   description = "Set a password for the web user"
 
   validation {
