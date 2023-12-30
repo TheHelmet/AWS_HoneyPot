@@ -53,7 +53,7 @@ resource "aws_instance" "tpot" {
   key_name      = var.ec2_ssh_key_name
   subnet_id     = var.ec2_subnet_id
   tags = {
-    Name = "T-Pot Honeypot"
+    Name = "Honepot-${count.index +1}"
   }
   root_block_device {
     volume_type           = "gp2"
