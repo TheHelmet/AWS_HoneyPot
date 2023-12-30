@@ -8,30 +8,18 @@ variable "ec2_vpc_id" {
   default     = "vpc-0fed1133240a2f381"
 }
 
-variable "ec2_vpc_id_2" {
-  description = "ID of AWS VPC"
-  default     = "vpc-00ef9f29c5faa4164"
-}
 
 variable "ec2_subnet_id" {
   description = "ID of AWS VPC subnet"
   default     = "subnet-06055133c7be88151"
 }
 
-variable "ec2_subnet_id_2" {
-  description = "ID of AWS VPC subnet"
-  default     = "subnet-0774b44a9dabcbac61"
-}
 
 variable "ec2_region" {
   description = "AWS region to launch servers"
   default     = "ap-southeast-2"
 }
 
-variable "ec2_region_2" {
-  description = "AWS region to launch servers"
-  default     = "us-east-1
-}
 
 variable "ec2_ssh_key_name" {
   default = "helmet-keypair"
