@@ -31,6 +31,13 @@ resource "aws_security_group" "tpot" {
     cidr_blocks = var.admin_ip
   }
   ingress {
+  from_port     = 64295
+  to_port       = 64295
+  protocol      = "tcp"
+  cidr_blocks   = ["172.31.0.0/16"]
+  }
+
+  ingress {
     from_port   = 64297
     to_port     = 64297
     protocol    = "tcp"
