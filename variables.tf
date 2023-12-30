@@ -10,7 +10,7 @@ variable "ec2_vpc_id" {
 
 variable "ec2_vpc_id_2" {
   description = "ID of AWS VPC"
-  default     = "vpc-0fed1133240a2f381"
+  default     = "vpc-00ef9f29c5faa4164"
 }
 
 variable "ec2_subnet_id" {
@@ -20,7 +20,7 @@ variable "ec2_subnet_id" {
 
 variable "ec2_subnet_id_2" {
   description = "ID of AWS VPC subnet"
-  default     = "subnet-06055133c7be88151"
+  default     = "subnet-0774b44a9dabcbac61"
 }
 
 variable "ec2_region" {
