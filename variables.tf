@@ -76,10 +76,10 @@ variable "linux_password" {
 }
 
 ## These will go in the generated tpot.conf file ##
-variable "tpot_flavor" {
+##variable "tpot_flavor" {
   default     = "STANDARD"
   description = "Specify your tpot flavor [STANDARD, HIVE, HIVE_SENSOR, INDUSTRIAL, LOG4J, MEDICAL, MINI, SENSOR]"
-}
+}##
 
 variable "web_user" {
   default     = "webuser"
