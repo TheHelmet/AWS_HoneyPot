@@ -50,6 +50,7 @@ resource "aws_security_group" "tpot" {
 resource "aws_instance" "tpot" {
   ami           = var.ec2_ami[var.ec2_region]
   instance_type = var.ec2_instance_type
+  count         = var.instance_count
   key_name      = var.ec2_ssh_key_name
   subnet_id     = var.ec2_subnet_id
   tags = {
