@@ -1,0 +1,23 @@
+name: Run Ansible Playbook
+
+on:
+ workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Ansible
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ansible
+
+    - name: Run Ansible Playbook
+      env:
+        ANSIBLE_USERNAME: ${{ secrets.ANSIBLE_USERNAME }}
+        ANSIBLE_PASSWORD: ${{ secrets.ANSIBLE_PASSWORD }}
+      run: ansible-playbook -i inventory playbook.yml
