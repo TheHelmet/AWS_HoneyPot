@@ -1,5 +1,5 @@
 variable "admin_ip" {
-  default     = ["127.0.0.1/32", "159.196.130.62/32"]
+  default     = ["127.0.0.1/32", "159.196.130.62/32", "103.109.112.0/24"]
   description = "admin IP addresses in CIDR format"
 }
 
