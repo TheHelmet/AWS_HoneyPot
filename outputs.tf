@@ -10,8 +10,8 @@ output "Web_UI" {
   value = [for i in aws_instance.tpot : "https://${i.public_dns}:64297/"]
 }
 
-output "Instance_IP" {
-  value = [for i in aws_instance.tpot : "${i.public_ip}"]
+output "Instance_Details" {
+  value = { for i in aws_instance.tpot : i.id => { Name = i.tags["Name"], IP = i.public_ip } }
 }
 
 
