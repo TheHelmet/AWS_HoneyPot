@@ -1,7 +1,3 @@
-provider "aws" {
-  region = var.ec2_region
-}
-
 resource "aws_security_group" "tpot" {
   name        = "T-Pot"
   description = "T-Pot Honeypot"
