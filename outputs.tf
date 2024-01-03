@@ -11,7 +11,7 @@ output "Web_UI" {
 }
 
 output "Instance_IP" {
-  value = [for i in aws_instance.tpot : "${i.public_ip}"]
+  value = [for i in aws_instance.tpot : "${i.Name}" "${i.public_ip}"]
 }
 
 
