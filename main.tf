@@ -6,7 +6,7 @@ resource "aws_instance" "tpot" {
   subnet_id     = aws_subnet.subnet_honeynet_1.id
   tags = {
     Name = "Honeypot-${count.index}"
-
+depends_on = [aws_subnet.subnet_honeynet_1.id]
   }
   root_block_device {
     volume_type           = "gp2"
