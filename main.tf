@@ -14,11 +14,11 @@ resource "aws_internet_gateway" "gateway" {
   }
 }
 
-resource "aws_subnet" "honeynet_1" {
+resource "aws_subnet" "honeynet" {
   vpc_id     = aws_vpc.vpc_honeypot.id
   cidr_block = "172.31.1.0/24" # This is a subset of the VPC's CIDR block
   tags = {
-    Name = "subnet-honeynet_1" 
+    Name = "subnet-honeynet" 
   }
 }
 
@@ -86,10 +86,10 @@ resource "aws_instance" "tpot" {
   instance_type = var.ec2_instance_type
   count         = var.instance_count
   key_name      = var.ec2_ssh_key_name
-  subnet_id     = aws_subnet.subnet_honeynet_1.id
+  subnet_id     = aws_subnet.subnet_honeynet.id
   tags = {
     Name = "Honeypot-${count.index}"
-depends_on = [aws_subnet.subnet_honeynet_1.id]
+depends_on = [aws_subnet.subnet_honeynet.id]
   }
   root_block_device {
     volume_type           = "gp2"
