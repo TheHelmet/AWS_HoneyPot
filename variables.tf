@@ -5,13 +5,13 @@ variable "admin_ip" {
 
 variable "ec2_vpc_id" {
   description = "ID of AWS VPC"
-  default     = "vpc-0fed1133240a2f381"
+  default     = "vpc-honeypot"
 }
 
 
 variable "ec2_subnet_id" {
   description = "ID of AWS VPC subnet"
-  default     = "subnet-06055133c7be88151"
+  default     = "subnet-honeynet_1"
 }
 
 
