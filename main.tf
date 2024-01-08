@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "gateway" {
 
 resource "aws_subnet" "honeynet" {
   vpc_id     = aws_vpc.vpc_honeypot.id
-  cidr_block = "172.31.1.0/24" # This is a subset of the VPC's CIDR block
+  cidr_block = "192.168.1.0/24" # This is a subset of the VPC's CIDR block
   tags = {
     Name = "subnet-honeynet" 
   }
@@ -54,14 +54,14 @@ resource "aws_security_group" "tpot" {
   from_port     = 64295
   to_port       = 64295
   protocol      = "tcp"
-  cidr_blocks   = ["172.31.0.0/16"]
+  cidr_blocks   = ["192.168.0.0/16"]
   }
 
  ingress {
   from_port     = 64305
   to_port       = 64305
   protocol      = "tcp"
-  cidr_blocks   = ["172.31.0.0/16"]
+  cidr_blocks   = ["192.168.0.0/16"]
   }
 
   ingress {
