@@ -25,7 +25,7 @@ resource "aws_subnet" "honeynet_1" {
 resource "aws_security_group" "tpot" {
   name        = "T-Pot"
   description = "T-Pot Honeypot"
-  vpc_id      = var.ec2_vpc_id
+  vpc_id      = aws_vpc.vpc_honeypot.id
   ingress {
     from_port   = 0
     to_port     = 64000
