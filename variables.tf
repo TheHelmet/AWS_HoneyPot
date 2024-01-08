@@ -26,13 +26,13 @@ variable "ec2_ssh_key_name" {
 }
 
 variable "instance_count" {
-  default = "3"
+  default = "1"
 }
 
 # https://aws.amazon.com/ec2/instance-types/
 # t3.large = 2 vCPU, 8 GiB RAM
 variable "ec2_instance_type" {
-  default = "t3.large"
+  default = "t2.medium"
 }
 
 # Refer to https://wiki.debian.org/Cloud/AmazonEC2Image/Bullseye
