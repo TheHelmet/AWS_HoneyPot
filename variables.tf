@@ -3,16 +3,16 @@ variable "admin_ip" {
   description = "admin IP addresses in CIDR format"
 }
 
-variable "ec2_vpc_id" {
-  description = "ID of AWS VPC"
-  default     = aws_vpc.vpc_honeypot.id
-}
+##variable "ec2_vpc_id" {
+ ## description = "ID of AWS VPC"
+  ##default     = aws_vpc.vpc_honeypot.id
+##}
 
 
-variable "ec2_subnet_id" {
-  description = "ID of AWS VPC subnet"
-  default     = aws_subnet.subnet_honeynet_1.id
-}
+##variable "ec2_subnet_id" {
+  ##description = "ID of AWS VPC subnet"
+  ##default     = aws_subnet.subnet_honeynet_1.id
+##}
 
 
 variable "ec2_region" {
