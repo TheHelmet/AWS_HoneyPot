@@ -86,7 +86,7 @@ resource "aws_instance" "tpot" {
   instance_type = var.ec2_instance_type
   count         = var.instance_count
   key_name      = var.ec2_ssh_key_name
-  subnet_id     = "${aws_vpc.vpc-honeynet.id}"
+  subnet_id     = "${aws_vpc.subnet-honeynet.id}"
   tags = {
     Name = "Honeypot-${count.index}"
 
